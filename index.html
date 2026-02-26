@@ -490,7 +490,7 @@
             display: flex;
             justify-content: space-around;
             margin: 12px 0;
-            padding: 10px;
+            padding: 15px 10px;
             background: rgba(255,255,255,0.08);
             backdrop-filter: blur(5px);
             border-radius: 30px;
@@ -500,9 +500,9 @@
         .contact-item {
             display: flex;
             align-items: center;
-            gap: 5px;
+            gap: 8px;
             color: white;
-            font-size: 0.75rem;
+            font-size: 0.85rem;
             text-decoration: none;
             transition: all 0.3s;
         }
@@ -513,14 +513,26 @@
         }
 
         .contact-icon {
-            width: 28px;
-            height: 28px;
+            width: 35px;
+            height: 35px;
             background: linear-gradient(135deg, #667eea, #764ba2);
-            border-radius: 10px;
+            border-radius: 12px;
             display: flex;
             align-items: center;
             justify-content: center;
+            font-size: 1.1rem;
+        }
+
+        .support-badge {
+            background: #ff6b6b;
+            color: white;
+            padding: 5px 15px;
+            border-radius: 50px;
             font-size: 0.9rem;
+            font-weight: bold;
+            display: inline-block;
+            margin-top: 5px;
+            box-shadow: 0 5px 15px rgba(255,107,107,0.4);
         }
 
         .cta-button {
@@ -565,35 +577,72 @@
             left: 100%;
         }
 
-        /* استایل جدید برای اطلاعات تماس زیر عکس */
-        .contact-info-small {
-            margin-top: 8px;
+        .price-section {
+            margin: 20px 0 15px;
             text-align: center;
-            font-size: 0.7rem;
-            color: rgba(255, 255, 255, 0.8);
-            background: rgba(255, 255, 255, 0.08);
-            backdrop-filter: blur(5px);
-            border-radius: 20px;
-            padding: 5px 10px;
+            position: relative;
+        }
+
+        .price-badge {
             display: inline-block;
-            width: auto;
-            border: 1px solid rgba(255,255,255,0.15);
+            background: linear-gradient(135deg, #ffd700, #ff6b6b);
+            padding: 15px 40px;
+            border-radius: 60px;
+            animation: pricePulse 2s infinite;
+            box-shadow: 0 10px 30px rgba(255, 215, 0, 0.3);
+            border: 2px solid rgba(255,255,255,0.5);
         }
-        
-        .contact-info-small span {
-            display: inline-block;
-            margin: 0 5px;
+
+        .price-text {
+            color: white;
+            font-size: 2rem;
+            font-weight: bold;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            letter-spacing: 2px;
         }
-        
-        .contact-info-small i {
-            color: #feca57;
-            margin-left: 2px;
+
+        .price-text::before {
+            content: '💰';
+            margin-left: 10px;
+            font-size: 2rem;
         }
-        
-        .avatar-section {
+
+        .price-text::after {
+            content: '✨';
+            margin-right: 10px;
+            font-size: 2rem;
+        }
+
+        @keyframes pricePulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+
+        .first-session {
             display: flex;
-            flex-direction: column;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 10px;
+            flex-wrap: wrap;
+        }
+
+        .offer-badge {
+            background: linear-gradient(135deg, rgba(255,107,107,0.3), rgba(254,202,87,0.3));
+            backdrop-filter: blur(5px);
+            border: 2px solid rgba(255,255,255,0.3);
+            padding: 8px 20px;
+            border-radius: 40px;
+            color: white;
+            font-size: 0.9rem;
+            font-weight: bold;
+            display: inline-flex;
             align-items: center;
+            gap: 8px;
+        }
+
+        .offer-badge:first-child {
+            background: linear-gradient(135deg, rgba(102,126,234,0.3), rgba(255,107,107,0.3));
         }
     </style>
 </head>
@@ -602,17 +651,10 @@
         <div class="card-glow"></div>
         <div class="premium-card">
             <div class="card-header">
-                <div class="avatar-section">
-                    <div class="avatar-container">
-                        <div class="avatar-ring"></div>
-                        <div class="avatar">
-                            <img src="https://i.ibb.co/WvGjWPQk/IMG-20260224-002111-492.jpg" alt="آوین لنگرودی">
-                        </div>
-                    </div>
-                    <!-- اطلاعات تماس کوچک زیر عکس -->
-                    <div class="contact-info-small">
-                        <span><i>📱</i> ۰۹۰۳۰۱۱۲۲۹۴</span>
-                        <span><i>✉️</i> avinlangroodi4@gmail.com</span>
+                <div class="avatar-container">
+                    <div class="avatar-ring"></div>
+                    <div class="avatar">
+                        <img src="https://i.ibb.co/WvGjWPQk/IMG-20260224-002111-492.jpg" alt="آوین لنگرودی">
                     </div>
                 </div>
                 <div class="title-section">
@@ -654,27 +696,4 @@
                 </div>
             </div>
 
-            <div class="features-grid">
-                <div class="feature-card">
-                    <div class="feature-header">
-                        <div class="feature-icon">📐</div>
-                        <div class="feature-title">دروس تخصصی</div>
-                    </div>
-                    <div class="feature-desc">ریاضی، کامپیوتر</div>
-                    <ul class="feature-list">
-                        <li>ریاضیات تمام پایه‌ها</li>
-                        <li>برنامه‌نویسی پایتون</li>
-                        <li>HTML و ICDL</li>
-                    </ul>
-                </div>
-
-                <div class="feature-card">
-                    <div class="feature-header">
-                        <div class="feature-icon">📚</div>
-                        <div class="feature-title">دروس عمومی</div>
-                    </div>
-                    <div class="feature-desc">فارسی، علوم، مطالعات</div>
-                    <ul class="feature-list">
-                        <li>فارسی و املا</li>
-                        <li>علوم تجربی</li>
-       
+            <div class="featur
