@@ -495,38 +495,46 @@
             backdrop-filter: blur(5px);
             border-radius: 30px;
             border: 1px solid rgba(255,255,255,0.2);
+            flex-wrap: wrap;
+            gap: 10px;
         }
 
         .contact-item {
             display: flex;
             align-items: center;
-            gap: 5px;
+            gap: 8px;
             color: white;
-            font-size: 0.75rem;
+            font-size: 0.85rem;
             text-decoration: none;
             transition: all 0.3s;
+            padding: 5px 10px;
+            background: rgba(255,255,255,0.05);
+            border-radius: 50px;
+            border: 1px solid rgba(255,255,255,0.1);
         }
 
         .contact-item:hover {
             color: #feca57;
             transform: scale(1.05);
+            background: rgba(255,255,255,0.1);
+            border-color: rgba(254, 202, 87, 0.3);
         }
 
         .contact-icon {
-            width: 28px;
-            height: 28px;
+            width: 32px;
+            height: 32px;
             background: linear-gradient(135deg, #667eea, #764ba2);
             border-radius: 10px;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 0.9rem;
+            font-size: 1rem;
         }
 
         .cta-button {
             display: block;
             width: 100%;
-            padding: 10px;
+            padding: 12px;
             background: linear-gradient(135deg, #ff6b6b, #667eea, #764ba2);
             border: none;
             border-radius: 30px;
@@ -661,11 +669,4 @@
                         <div class="feature-icon">📊</div>
                         <div class="feature-title">گزارش ماهانه</div>
                     </div>
-                    <div class="feature-desc">به والدین</div>
-                    <ul class="feature-list">
-                        <li>کارنامه پیشرفت</li>
-                        <li>نقاط قوت و ضعف</li>
-                        <li>برنامه ماه آینده</li>
-                    </ul>
-                </div>
-            </
+    
