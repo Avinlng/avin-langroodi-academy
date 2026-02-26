@@ -83,6 +83,36 @@
             100% { background-position: 0% 0%; }
         }
 
+        .top-contact {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-bottom: 15px;
+            padding: 8px 15px;
+            background: rgba(255,255,255,0.15);
+            backdrop-filter: blur(10px);
+            border-radius: 50px;
+            border: 1px solid rgba(255,255,255,0.3);
+            color: white;
+            font-size: 0.9rem;
+        }
+
+        .top-contact-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .top-contact-item a {
+            color: white;
+            text-decoration: none;
+            direction: ltr;
+        }
+
+        .top-contact-item a:hover {
+            color: #feca57;
+        }
+
         .card-header {
             display: flex;
             align-items: center;
@@ -570,6 +600,22 @@
     <div class="showcase-card">
         <div class="card-glow"></div>
         <div class="premium-card">
+            <!-- خط جدید بالای صفحه -->
+            <div class="top-contact">
+                <div class="top-contact-item">
+                    <span>📱</span>
+                    <a href="tel:09030112294">۰۹۰۳۰۱۱۲۲۹۴</a>
+                </div>
+                <div class="top-contact-item">
+                    <span>✉️</span>
+                    <a href="mailto:avinlangroodi4@gmail.com">avinlangroodi4@gmail.com</a>
+                </div>
+                <div class="top-contact-item">
+                    <span>⏰</span>
+                    <span>پشتیبانی ۲۴ ساعته</span>
+                </div>
+            </div>
+
             <div class="card-header">
                 <div class="avatar-container">
                     <div class="avatar-ring"></div>
@@ -636,38 +682,4 @@
                         <div class="feature-title">دروس عمومی</div>
                     </div>
                     <div class="feature-desc">فارسی، علوم، مطالعات</div>
-                    <ul class="feature-list">
-                        <li>فارسی و املا</li>
-                        <li>علوم تجربی</li>
-                        <li>مطالعات اجتماعی</li>
-                    </ul>
-                </div>
-
-                <div class="feature-card">
-                    <div class="feature-header">
-                        <div class="feature-icon">📝</div>
-                        <div class="feature-title">امتحانات نهایی</div>
-                    </div>
-                    <div class="feature-desc">آمادگی کامل</div>
-                    <ul class="feature-list">
-                        <li>نمونه سوال نهایی</li>
-                        <li>رفع اشکال</li>
-                        <li>تکنیک‌های تستی</li>
-                    </ul>
-                </div>
-
-                <div class="feature-card">
-                    <div class="feature-header">
-                        <div class="feature-icon">📊</div>
-                        <div class="feature-title">گزارش ماهانه</div>
-                    </div>
-                    <div class="feature-desc">به والدین</div>
-                    <ul class="feature-list">
-                        <li>کارنامه پیشرفت</li>
-                        <li>نقاط قوت و ضعف</li>
-                        <li>برنامه ماه آینده</li>
-                    </ul>
-                </div>
-            </div>
-
-         
+    
