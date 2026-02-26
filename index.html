@@ -466,6 +466,8 @@
             transition: all 0.4s;
             position: relative;
             overflow: hidden;
+            text-decoration: none;
+            color: white;
         }
 
         .action-btn::before {
@@ -493,6 +495,20 @@
             font-size: 1.8rem;
         }
 
+        .soon-badge {
+            position: absolute;
+            top: -5px;
+            left: -5px;
+            background: #ff6b6b;
+            color: white;
+            font-size: 0.6rem;
+            padding: 3px 8px;
+            border-radius: 15px;
+            font-weight: bold;
+            box-shadow: 0 3px 8px rgba(0,0,0,0.3);
+            transform: rotate(-10deg);
+        }
+
         .contact-bar {
             display: flex;
             justify-content: space-around;
@@ -510,6 +526,13 @@
             gap: 8px;
             color: white;
             font-size: 0.95rem;
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+
+        .contact-item:hover {
+            color: #feca57;
+            transform: scale(1.05);
         }
 
         .contact-icon {
@@ -541,6 +564,8 @@
             background-size: 200% 200%;
             border: 2px solid rgba(255,255,255,0.3);
             margin-top: 15px;
+            text-decoration: none;
+            text-align: center;
         }
 
         .cta-button::before {
@@ -615,7 +640,7 @@
                 <div class="avatar-container">
                     <div class="avatar-ring"></div>
                     <div class="avatar">
-                        <img src="https://i.ibb.co/dJJ0Vzk4/IMG-20250226-WA0002-1.jpg" alt="آوین لنگرودی">
+                        <img src="https://i.ibb.co/WvGjWPQk/IMG-20260224-002111-492.jpg" alt="آوین لنگرودی">
                     </div>
                 </div>
                 <div class="title-section">
@@ -680,4 +705,103 @@
                     <div class="stat-number">۹۸٪</div>
                     <div class="stat-label">رضایت دانش‌آموزان</div>
                 </div>
-                <div
+                <div class="stat-box">
+                    <div class="stat-number">۸</div>
+                    <div class="stat-label">سال سابقه</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-number">۲</div>
+                    <div class="stat-label">استان کانادا</div>
+                </div>
+            </div>
+
+            <div class="subjects-showcase">
+                <span class="subject-tag">📐 ریاضیات</span>
+                <span class="subject-tag">💻 کامپیوتر</span>
+                <span class="subject-tag">🖥️ ICDL</span>
+                <span class="subject-tag">🐍 پایتون</span>
+                <span class="subject-tag">🌐 HTML</span>
+            </div>
+
+            <div class="achievement-grid">
+                <div class="achievement-item">
+                    <div class="achievement-icon">🏅</div>
+                    <div class="achievement-text">
+                        <div class="achievement-title">موفقیت درخشان</div>
+                        <div class="achievement-desc">کلی متقاضیان موفق نمونه دولتی و تیزهوشان شاگرد من بودن!</div>
+                    </div>
+                </div>
+                <div class="achievement-item">
+                    <div class="achievement-icon">🧩</div>
+                    <div class="achievement-text">
+                        <div class="achievement-title">آموزش کودکان</div>
+                        <div class="achievement-desc">آموزش خواندن، نوشتن و جدول ضرب به کودکان با نیازهای ویژه</div>
+                    </div>
+                </div>
+                <div class="achievement-item">
+                    <div class="achievement-icon">📋</div>
+                    <div class="achievement-text">
+                        <div class="achievement-title">مشاور آموزشی</div>
+                        <div class="achievement-desc">برنامه‌ریزی برای آزمون‌های تیزهوشان و نمونه دولتی</div>
+                    </div>
+                </div>
+                <div class="achievement-item">
+                    <div class="achievement-icon">🌎</div>
+                    <div class="achievement-text">
+                        <div class="achievement-title">تدریس بین‌المللی</div>
+                        <div class="achievement-desc">ریاضی، کامپیوتر و انگلیسی به دانش‌آموزان کانادایی</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="action-buttons">
+                <a href="javascript:void(0)" onclick="showComingSoon('رزرو کلاس')" class="action-btn">
+                    <span class="soon-badge">به زودی</span>
+                    <span class="action-icon">⏰</span>
+                    <span>رزرو کلاس</span>
+                </a>
+                <a href="javascript:void(0)" onclick="showComingSoon('مشاوره رایگان')" class="action-btn">
+                    <span class="soon-badge">به زودی</span>
+                    <span class="action-icon">💬</span>
+                    <span>مشاوره رایگان</span>
+                </a>
+                <a href="javascript:void(0)" onclick="showComingSoon('ارتباط با من')" class="action-btn">
+                    <span class="soon-badge">به زودی</span>
+                    <span class="action-icon">📞</span>
+                    <span>ارتباط با من</span>
+                </a>
+                <a href="javascript:void(0)" onclick="showComingSoon('پیشنهادات و انتقادات')" class="action-btn">
+                    <span class="soon-badge">به زودی</span>
+                    <span class="action-icon">💡</span>
+                    <span>پیشنهادات</span>
+                </a>
+            </div>
+
+            <div class="contact-bar">
+                <a href="tel:09123456789" class="contact-item">
+                    <div class="contact-icon">📱</div>
+                    <span>۰۹۱۲۳۴۵۶۷۸۹</span>
+                </a>
+                <a href="mailto:avin.langroudi@gmail.com" class="contact-item">
+                    <div class="contact-icon">✉️</div>
+                    <span>avin.langroudi@gmail.com</span>
+                </a>
+                <div class="contact-item">
+                    <div class="contact-icon">💬</div>
+                    <span>پشتیبانی ۲۴ ساعته</span>
+                </div>
+            </div>
+
+            <a href="javascript:void(0)" onclick="showComingSoon('رزرو کلاس')" class="cta-button">
+                ✨ همین حالا رزرو کلاس ✨
+            </a>
+        </div>
+    </div>
+
+    <script>
+        function showComingSoon(pageName) {
+            alert(`✨ صفحه "${pageName}" به زودی آماده میشه!\n\nلطفاً چند روز دیگه دوباره چک کن.`);
+        }
+    </script>
+</body>
+</html>
