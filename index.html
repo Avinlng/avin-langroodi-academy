@@ -122,6 +122,13 @@
             border: 3px solid rgba(255,255,255,0.5);
             box-shadow: 0 10px 20px rgba(0,0,0,0.3);
             overflow: hidden;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 2.5rem;
+            font-weight: bold;
         }
 
         .avatar img {
@@ -565,45 +572,10 @@
             left: 100%;
         }
 
-        /* استایل منوی کشویی جدید */
-        .dropdown-menu {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 8px;
-            margin: 15px 0 5px;
-        }
-
-        .dropdown-item {
-            background: rgba(0, 0, 0, 0.4);
-            backdrop-filter: blur(8px);
-            border: 2px solid rgba(255, 215, 0, 0.3);
-            border-radius: 20px;
-            padding: 10px 5px;
-            color: white;
-            font-size: 0.7rem;
-            font-weight: 600;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 5px;
-            text-align: center;
-            transition: all 0.3s ease;
-            cursor: pointer;
-            text-decoration: none;
-            box-shadow: 0 8px 15px rgba(0,0,0,0.3);
-            border-color: #feca57;
-        }
-
-        .dropdown-item:hover {
-            transform: scale(1.02) translateY(-3px);
-            background: linear-gradient(135deg, #ff6b6b, #667eea);
-            border-color: white;
-            box-shadow: 0 15px 20px -5px #feca57;
-        }
-
-        .dropdown-icon {
-            font-size: 1.3rem;
-            filter: drop-shadow(0 2px 3px black);
+        @keyframes gradient {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
         }
     </style>
 </head>
@@ -615,7 +587,7 @@
                 <div class="avatar-container">
                     <div class="avatar-ring"></div>
                     <div class="avatar">
-                        <img src="https://i.ibb.co/WvGjWPQk/IMG-20260224-002111-492.jpg" alt="آوین لنگرودی">
+                        <img src="https://i.ibb.co/WvGjWPQk/IMG-20260224-002111-492.jpg" alt="آوین لنگرودی" onerror="this.style.display='none'; this.parentElement.innerHTML='آ'">
                     </div>
                 </div>
                 <div class="title-section">
@@ -645,15 +617,15 @@
                 </div>
                 <div class="stat-box">
                     <div class="stat-number">۹۸٪</div>
-                    <div class="stat-label">رضایت</div>
+                    <div class="stat-label">رضایت دانش‌آموزان</div>
                 </div>
                 <div class="stat-box">
                     <div class="stat-number">۴.۵</div>
-                    <div class="stat-label">سال سابقه</div>
+                    <div class="stat-label">سال سابقه تدریس</div>
                 </div>
                 <div class="stat-box">
                     <div class="stat-number">۲</div>
-                    <div class="stat-label">کشور</div>
+                    <div class="stat-label">کشور فعال</div>
                 </div>
             </div>
 
@@ -679,4 +651,22 @@
                     <div class="feature-desc">فارسی، علوم، مطالعات</div>
                     <ul class="feature-list">
                         <li>فارسی و املا</li>
-                        <li
+                        <li>علوم تجربی</li>
+                        <li>مطالعات اجتماعی</li>
+                    </ul>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-header">
+                        <div class="feature-icon">📝</div>
+                        <div class="feature-title">امتحانات نهایی</div>
+                    </div>
+                    <div class="feature-desc">آمادگی کامل</div>
+                    <ul class="feature-list">
+                        <li>نمونه سوال نهایی</li>
+                        <li>رفع اشکال</li>
+                        <li>تکنیک‌های تستی</li>
+                    </ul>
+                </div>
+
+                <div class="fe
