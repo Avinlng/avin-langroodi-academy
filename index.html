@@ -564,6 +564,84 @@
         .cta-button:hover::before {
             left: 100%;
         }
+
+        .dropdown-menu {
+            display: flex;
+            justify-content: center;
+            margin: 15px 0;
+            position: relative;
+        }
+
+        .dropdown-btn {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            backdrop-filter: blur(5px);
+            border: 2px solid rgba(255,255,255,0.3);
+            border-radius: 40px;
+            padding: 12px 30px;
+            color: white;
+            font-size: 1rem;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            cursor: pointer;
+            transition: all 0.4s;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+        }
+
+        .dropdown-btn:hover {
+            transform: scale(1.02);
+            border-color: #feca57;
+            box-shadow: 0 15px 25px -8px #feca57;
+        }
+
+        .dropdown-content {
+            position: absolute;
+            top: 110%;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 90%;
+            background: rgba(20, 30, 40, 0.95);
+            backdrop-filter: blur(15px);
+            border: 2px solid rgba(255,255,255,0.2);
+            border-radius: 25px;
+            padding: 10px;
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            z-index: 10;
+            box-shadow: 0 20px 30px -10px black;
+        }
+
+        .dropdown-content.show {
+            display: flex;
+        }
+
+        .dropdown-item {
+            background: rgba(255,255,255,0.05);
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 18px;
+            padding: 12px 15px;
+            color: white;
+            text-decoration: none;
+            font-size: 0.9rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            transition: all 0.3s;
+        }
+
+        .dropdown-item:hover {
+            background: linear-gradient(135deg, #ff6b6b, #667eea);
+            border-color: transparent;
+            transform: translateX(-5px);
+        }
+
+        .dropdown-icon {
+            font-size: 1.2rem;
+            width: 30px;
+            text-align: center;
+        }
     </style>
 </head>
 <body>
@@ -617,55 +695,4 @@
             </div>
 
             <div class="features-grid">
-                <div class="feature-card">
-                    <div class="feature-header">
-                        <div class="feature-icon">📐</div>
-                        <div class="feature-title">دروس تخصصی</div>
-                    </div>
-                    <div class="feature-desc">ریاضی، کامپیوتر</div>
-                    <ul class="feature-list">
-                        <li>ریاضیات تمام پایه‌ها</li>
-                        <li>برنامه‌نویسی پایتون</li>
-                        <li>HTML و ICDL</li>
-                    </ul>
-                </div>
-
-                <div class="feature-card">
-                    <div class="feature-header">
-                        <div class="feature-icon">📚</div>
-                        <div class="feature-title">دروس عمومی</div>
-                    </div>
-                    <div class="feature-desc">فارسی، علوم، مطالعات</div>
-                    <ul class="feature-list">
-                        <li>فارسی و املا</li>
-                        <li>علوم تجربی</li>
-                        <li>مطالعات اجتماعی</li>
-                    </ul>
-                </div>
-
-                <div class="feature-card">
-                    <div class="feature-header">
-                        <div class="feature-icon">📝</div>
-                        <div class="feature-title">امتحانات نهایی</div>
-                    </div>
-                    <div class="feature-desc">آمادگی کامل</div>
-                    <ul class="feature-list">
-                        <li>نمونه سوال نهایی</li>
-                        <li>رفع اشکال</li>
-                        <li>تکنیک‌های تستی</li>
-                    </ul>
-                </div>
-
-                <div class="feature-card">
-                    <div class="feature-header">
-                        <div class="feature-icon">📊</div>
-                        <div class="feature-title">گزارش ماهانه</div>
-                    </div>
-                    <div class="feature-desc">به والدین</div>
-                    <ul class="feature-list">
-                        <li>کارنامه پیشرفت</li>
-                        <li>نقاط قوت و ضعف</li>
-                        <li>برنامه ماه آینده</li>
-                    </ul>
-                </div>
-            </
+                <div class="
