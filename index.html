@@ -18,7 +18,6 @@
             padding: 20px;
         }
 
-        /* منوی کشویی */
         .navbar {
             background: rgba(255, 255, 255, 0.1);
             backdrop-filter: blur(10px);
@@ -87,7 +86,6 @@
             color: #feca57;
         }
 
-        /* کارت اصلی */
         .showcase-card {
             max-width: 1000px;
             width: 100%;
@@ -151,7 +149,6 @@
             100% { background-position: 0% 0%; }
         }
 
-        /* بخش مشاوره رایگان */
         .consult-banner {
             background: linear-gradient(135deg, #ff6b6b, #667eea);
             border-radius: 20px;
@@ -182,99 +179,76 @@
             display: inline-block;
         }
 
-        /* هدر */
         .card-header {
-            display: flex;
-            align-items: center;
-            gap: 30px;
             margin-bottom: 25px;
-            flex-wrap: wrap;
-        }
-
-        .avatar-container {
-            position: relative;
-            width: 130px;
-            height: 130px;
-        }
-
-        .avatar-ring {
-            position: absolute;
-            top: -8px;
-            left: -8px;
-            right: -8px;
-            bottom: -8px;
-            border-radius: 50%;
-            background: linear-gradient(135deg, #ff6b6b, #667eea, #feca57);
-            animation: spin 8s linear infinite;
-        }
-
-        @keyframes spin {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
-        }
-
-        .avatar {
-            width: 100%;
-            height: 100%;
-            border-radius: 50%;
-            position: relative;
-            z-index: 2;
-            border: 4px solid rgba(255,255,255,0.5);
-            box-shadow: 0 10px 20px rgba(0,0,0,0.3);
-            overflow: hidden;
-            background: linear-gradient(135deg, #667eea, #764ba2);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-size: 3rem;
-            font-weight: bold;
-        }
-
-        .avatar img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            display: block;
         }
 
         .title-section {
-            flex: 1;
+            text-align: center;
         }
 
         .name {
-            font-size: 2.5rem;
+            font-size: 2.8rem;
             font-weight: bold;
             background: linear-gradient(135deg, #fff, #feca57, #ff6b6b);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
-            margin-bottom: 5px;
+            margin-bottom: 10px;
             line-height: 1.2;
         }
 
         .subtitle {
-            font-size: 1.2rem;
+            font-size: 1.3rem;
             color: #feca57;
-            margin-bottom: 10px;
+            margin-bottom: 15px;
         }
 
         .badge-container {
             display: flex;
-            gap: 10px;
+            gap: 15px;
             flex-wrap: wrap;
+            justify-content: center;
         }
 
         .badge {
             background: rgba(255,255,255,0.15);
             backdrop-filter: blur(5px);
             border: 1px solid rgba(255,255,255,0.3);
-            padding: 5px 15px;
+            padding: 8px 20px;
             border-radius: 30px;
             color: white;
-            font-size: 0.85rem;
+            font-size: 0.95rem;
             display: flex;
             align-items: center;
-            gap: 5px;
+            gap: 8px;
+        }
+
+        .teaching-banner {
+            background: linear-gradient(135deg, #feca57, #ff6b6b);
+            border-radius: 20px;
+            padding: 15px 20px;
+            margin: 20px 0;
+            text-align: center;
+            border: 2px solid rgba(255,255,255,0.3);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+        }
+
+        .teaching-text {
+            color: white;
+            font-size: 1.3rem;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .teaching-icon {
+            font-size: 2rem;
+            background: rgba(255,255,255,0.2);
+            padding: 5px 15px;
+            border-radius: 50px;
         }
 
         .education-box {
@@ -458,7 +432,7 @@
 
         .action-buttons {
             display: grid;
-            grid-template-columns: repeat(4, 1fr);
+            grid-template-columns: repeat(3, 1fr);
             gap: 15px;
             margin: 25px 0 15px;
         }
@@ -574,18 +548,29 @@
             }
             
             .action-buttons {
-                grid-template-columns: repeat(2, 1fr);
+                grid-template-columns: repeat(3, 1fr);
             }
             
             .contact-bar {
                 flex-wrap: wrap;
                 gap: 10px;
             }
+            
+            .name {
+                font-size: 2.2rem;
+            }
+            
+            .subtitle {
+                font-size: 1.1rem;
+            }
+            
+            .teaching-text {
+                font-size: 1.1rem;
+            }
         }
     </style>
 </head>
 <body>
-    <!-- منوی کشویی -->
     <nav class="navbar">
         <div class="logo">آوین لنگرودی</div>
         <ul class="menu">
@@ -633,23 +618,15 @@
     <div class="showcase-card">
         <div class="card-glow"></div>
         <div class="premium-card">
-            <!-- بنر مشاوره رایگان -->
             <div class="consult-banner">
                 <span class="consult-text">📞 مشاوره رایگان</span>
                 <a href="tel:09174123428" class="consult-number">۰۹۱۷۴۱۲۳۴۲۸</a>
             </div>
 
-            <!-- هدر با عکس -->
             <div class="card-header">
-                <div class="avatar-container">
-                    <div class="avatar-ring"></div>
-                    <div class="avatar">
-                        <img src="https://i.ibb.co/WvGjWPQk/IMG-20260224-002111-492.jpg" alt="آوین لنگرودی" onerror="this.style.display='none'; this.parentElement.innerHTML='آ'">
-                    </div>
-                </div>
                 <div class="title-section">
                     <div class="name">آوین لنگرودی</div>
-                    <div class="subtitle">مدرس ریاضیات و کامپیوتر (برنامه نویسی پایتون، html و icdl)</div>
+                    <div class="subtitle">مدرس ریاضیات و کامپیوتر</div>
                     <div class="badge-container">
                         <span class="badge">🏆 مدرس تیزهوشان و نمونه دولتی</span>
                         <span class="badge">🌍 تدریس در کانادا و ایران</span>
@@ -658,7 +635,14 @@
                 </div>
             </div>
 
-            <!-- باکس خاطره -->
+            <div class="teaching-banner">
+                <div class="teaching-text">
+                    <span class="teaching-icon">📚</span>
+                    <span>تدریس در تمام پایه‌ها - از اول تا دوازدهم</span>
+                    <span class="teaching-icon">🎓</span>
+                </div>
+            </div>
+
             <div class="education-box">
                 <div class="education-icon">🎓</div>
                 <div class="education-text">
@@ -666,12 +650,11 @@
                 </div>
             </div>
 
-            <!-- آمار -->
             <div class="stats-grid">
                 <div class="stat-box">
                     <div class="stat-number">۹۰٪</div>
-                    <div class="stat-label">قبولی تیزهوشان</div>
-                    <div class="price-tag">و نمونه دولتی</div>
+                    <div class="stat-label">قبولی</div>
+                    <div class="price-tag">تیزهوشان و نمونه دولتی</div>
                 </div>
                 <div class="stat-box">
                     <div class="stat-number">۹۸٪</div>
@@ -693,11 +676,10 @@
                 <div class="stat-box">
                     <div class="stat-number">🏆</div>
                     <div class="stat-label">قبولی</div>
-                    <div class="price-tag">تیزهوشان</div>
+                    <div class="price-tag">نمونه دولتی</div>
                 </div>
             </div>
 
-            <!-- ویژگی‌ها -->
             <div class="features-grid">
                 <div class="feature-card">
                     <div class="feature-header">
@@ -752,7 +734,6 @@
                 </div>
             </div>
 
-            <!-- دسته‌بندی دروس -->
             <div class="subjects-grid">
                 <div class="subject-category">
                     <div class="category-title">📐 ریاضی و کامپیوتر</div>
@@ -784,12 +765,7 @@
                 </div>
             </div>
 
-            <!-- دکمه‌ها -->
             <div class="action-buttons">
-                <a href="#" class="action-btn">
-                    <span class="action-icon">📚</span>
-                    <span>نمونه تدریس</span>
-                </a>
                 <a href="#" class="action-btn">
                     <span class="action-icon">📝</span>
                     <span>نظرات</span>
@@ -804,7 +780,6 @@
                 </a>
             </div>
 
-            <!-- راه‌های ارتباطی -->
             <div class="contact-bar">
                 <a href="tel:09174123428" class="contact-item">
                     <div class="contact-icon">📞</div>
@@ -824,7 +799,6 @@
                 </a>
             </div>
 
-            <!-- دکمه اصلی -->
             <a href="tel:09174123428" class="cta-button">
                 ⭐ جلسه اول رایگان - همین حالا تماس بگیر ⭐
             </a>
