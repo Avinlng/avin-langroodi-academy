@@ -564,6 +564,37 @@
         .cta-button:hover::before {
             left: 100%;
         }
+
+        /* استایل جدید برای اطلاعات تماس زیر عکس */
+        .contact-info-small {
+            margin-top: 8px;
+            text-align: center;
+            font-size: 0.7rem;
+            color: rgba(255, 255, 255, 0.8);
+            background: rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(5px);
+            border-radius: 20px;
+            padding: 5px 10px;
+            display: inline-block;
+            width: auto;
+            border: 1px solid rgba(255,255,255,0.15);
+        }
+        
+        .contact-info-small span {
+            display: inline-block;
+            margin: 0 5px;
+        }
+        
+        .contact-info-small i {
+            color: #feca57;
+            margin-left: 2px;
+        }
+        
+        .avatar-section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
     </style>
 </head>
 <body>
@@ -571,10 +602,17 @@
         <div class="card-glow"></div>
         <div class="premium-card">
             <div class="card-header">
-                <div class="avatar-container">
-                    <div class="avatar-ring"></div>
-                    <div class="avatar">
-                        <img src="https://i.ibb.co/WvGjWPQk/IMG-20260224-002111-492.jpg" alt="آوین لنگرودی">
+                <div class="avatar-section">
+                    <div class="avatar-container">
+                        <div class="avatar-ring"></div>
+                        <div class="avatar">
+                            <img src="https://i.ibb.co/WvGjWPQk/IMG-20260224-002111-492.jpg" alt="آوین لنگرودی">
+                        </div>
+                    </div>
+                    <!-- اطلاعات تماس کوچک زیر عکس -->
+                    <div class="contact-info-small">
+                        <span><i>📱</i> ۰۹۰۳۰۱۱۲۲۹۴</span>
+                        <span><i>✉️</i> avinlangroodi4@gmail.com</span>
                     </div>
                 </div>
                 <div class="title-section">
@@ -639,35 +677,4 @@
                     <ul class="feature-list">
                         <li>فارسی و املا</li>
                         <li>علوم تجربی</li>
-                        <li>مطالعات اجتماعی</li>
-                    </ul>
-                </div>
-
-                <div class="feature-card">
-                    <div class="feature-header">
-                        <div class="feature-icon">📝</div>
-                        <div class="feature-title">امتحانات نهایی</div>
-                    </div>
-                    <div class="feature-desc">آمادگی کامل</div>
-                    <ul class="feature-list">
-                        <li>نمونه سوال نهایی</li>
-                        <li>رفع اشکال</li>
-                        <li>تکنیک‌های تستی</li>
-                    </ul>
-                </div>
-
-                <div class="feature-card">
-                    <div class="feature-header">
-                        <div class="feature-icon">📊</div>
-                        <div class="feature-title">گزارش ماهانه</div>
-                    </div>
-                    <div class="feature-desc">به والدین</div>
-                    <ul class="feature-list">
-                        <li>کارنامه پیشرفت</li>
-                        <li>نقاط قوت و ضعف</li>
-                        <li>برنامه ماه آینده</li>
-                    </ul>
-                </div>
-            </div>
-
-         
+       
