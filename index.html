@@ -432,7 +432,7 @@
 
         .action-buttons {
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
+            grid-template-columns: repeat(2, 1fr);
             gap: 15px;
             margin: 25px 0 15px;
         }
@@ -552,7 +552,7 @@
             }
             
             .action-buttons {
-                grid-template-columns: repeat(3, 1fr);
+                grid-template-columns: repeat(2, 1fr);
             }
             
             .contact-bar {
@@ -599,7 +599,6 @@
                 تماس با من
                 <div class="dropdown">
                     <a href="#">مشاوره رایگان</a>
-                    <a href="#">تعیین سطح</a>
                     <a href="#">پشتیبانی</a>
                 </div>
             </li>
@@ -749,10 +748,6 @@
                     <span>نظرات</span>
                 </a>
                 <a href="#" class="action-btn">
-                    <span class="action-icon">🎯</span>
-                    <span>تعیین سطح</span>
-                </a>
-                <a href="#" class="action-btn">
                     <span class="action-icon">📅</span>
                     <span>رزرو کلاس</span>
                 </a>
@@ -771,7 +766,7 @@
                     <div class="contact-icon">📱</div>
                     <span>واتساپ</span>
                 </a>
-                <a href="https://mail.google.com/mail/?view=cm&fs=1&to=avinlangroodi4@gmail.com&su=درخواست مشاوره تحصیلی&body=سلام آوین خانوم، من علاقه‌مند به دریافت مشاوره تحصیلی هستم." target="_blank" class="contact-item">
+                <a href="#" id="emailLink" class="contact-item">
                     <div class="contact-icon">📧</div>
                     <span>جیمیل</span>
                 </a>
@@ -782,5 +777,41 @@
             </a>
         </div>
     </div>
+
+    <script>
+        // تشخیص موبایل یا دسکتاپ
+        function isMobileDevice() {
+            return (typeof window.orientation !== "undefined") || 
+                   (navigator.userAgent.indexOf('IEMobile') !== -1) ||
+                   (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent));
+        }
+
+        // تنظیم لینک ایمیل بر اساس نوع دستگاه
+        function setEmailLink() {
+            const emailLink = document.getElementById('emailLink');
+            const email = 'avinlangroodi4@gmail.com';
+            const subject = 'درخواست مشاوره تحصیلی';
+            const body = 'سلام آوین خانوم، من علاقه‌مند به دریافت مشاوره تحصیلی هستم.';
+            
+            if (isMobileDevice()) {
+                // در موبایل: از پروتکل mailto استفاده کن
+                emailLink.href = `mailto:${email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+            } else {
+                // در لپ‌تاپ: از جیمیل وب استفاده کن
+                emailLink.href = `https://mail.google.com/mail/?view=cm&fs=1&to=${email}&su=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+                emailLink.target = '_blank';
+            }
+        }
+
+        // اجرا بعد از لود کامل صفحه
+        window.onload = setEmailLink;
+        
+        // آپدیت لینک اگر اندازه صفحه تغییر کرد (برای چرخش موبایل)
+        window.addEventListener('resize', function() {
+            // برای جلوگیری از اجرای مکرر
+            clearTimeout(window.resizedFinished);
+            window.resizedFinished = setTimeout(setEmailLink, 100);
+        });
+    </script>
 </body>
 </html>
