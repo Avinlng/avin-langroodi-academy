@@ -390,7 +390,7 @@
 
         .subjects-grid {
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
+            grid-template-columns: repeat(2, 1fr);
             gap: 15px;
             margin: 20px 0;
         }
@@ -432,7 +432,7 @@
 
         .action-buttons {
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
+            grid-template-columns: repeat(2, 1fr);
             gap: 15px;
             margin: 25px 0 15px;
         }
@@ -468,7 +468,8 @@
 
         .contact-bar {
             display: flex;
-            justify-content: space-around;
+            justify-content: center;
+            gap: 30px;
             margin: 20px 0;
             padding: 15px;
             background: rgba(255,255,255,0.08);
@@ -484,10 +485,13 @@
             color: white;
             font-size: 0.9rem;
             text-decoration: none;
+            cursor: pointer;
+            transition: all 0.2s ease;
         }
 
         .contact-item:hover {
             color: #feca57;
+            transform: scale(1.05);
         }
 
         .contact-icon {
@@ -548,12 +552,12 @@
             }
             
             .action-buttons {
-                grid-template-columns: repeat(3, 1fr);
+                grid-template-columns: repeat(2, 1fr);
             }
             
             .contact-bar {
                 flex-wrap: wrap;
-                gap: 10px;
+                gap: 15px;
             }
             
             .name {
@@ -580,11 +584,7 @@
             <li class="menu-item">
                 دوره‌ها
                 <div class="dropdown">
-                    <a href="#">ریاضیات</a>
-                    <a href="#">برنامه‌نویسی پایتون</a>
-                    <a href="#">HTML & CSS</a>
-                    <a href="#">ICDL</a>
-                    <a href="#">دروس عمومی</a>
+                    <a href="https://avinlng.github.io/master-golden-courses/" target="_blank">🏆 دوره‌های طلایی مستر</a>
                 </div>
             </li>
             <li class="menu-item">
@@ -599,7 +599,6 @@
                 تماس با من
                 <div class="dropdown">
                     <a href="#">مشاوره رایگان</a>
-                    <a href="#">تعیین سطح</a>
                     <a href="#">پشتیبانی</a>
                 </div>
             </li>
@@ -705,7 +704,7 @@
                     <ul class="feature-list">
                         <li>نمونه سوال نهایی</li>
                         <li>رفع اشکال</li>
-                        <li>تکنیک‌های تستی</li>
+                        <li>خلاصه نویسی و آموزش تشریحی</li>
                     </ul>
                 </div>
 
@@ -725,23 +724,11 @@
 
             <div class="subjects-grid">
                 <div class="subject-category">
-                    <div class="category-title">📐 ریاضی و کامپیوتر</div>
+                    <div class="category-title">💻 کامپیوتر مبتدی تا پیشرفته</div>
                     <div class="category-items">
-                        <span class="category-item">ریاضیات تمام پایه‌ها</span>
                         <span class="category-item">برنامه‌نویسی پایتون</span>
-                        <span class="category-item">HTML</span>
+                        <span class="category-item">HTML و طراحی وبسایت</span>
                         <span class="category-item">ICDL</span>
-                    </div>
-                </div>
-
-                <div class="subject-category">
-                    <div class="category-title">📚 دروس عمومی</div>
-                    <div class="category-items">
-                        <span class="category-item">فارسی و نگارش</span>
-                        <span class="category-item">دینی</span>
-                        <span class="category-item">عربی</span>
-                        <span class="category-item">مطالعات اجتماعی</span>
-                        <span class="category-item">زبان انگلیسی</span>
                     </div>
                 </div>
 
@@ -750,7 +737,6 @@
                     <div class="category-items">
                         <span class="category-item">نمونه سوال نهایی</span>
                         <span class="category-item">رفع اشکال</span>
-                        <span class="category-item">تکنیک‌های تستی</span>
                         <span class="category-item">کارنامه پیشرفت</span>
                     </div>
                 </div>
@@ -760,10 +746,6 @@
                 <a href="#" class="action-btn">
                     <span class="action-icon">📝</span>
                     <span>نظرات</span>
-                </a>
-                <a href="#" class="action-btn">
-                    <span class="action-icon">🎯</span>
-                    <span>تعیین سطح</span>
                 </a>
                 <a href="#" class="action-btn">
                     <span class="action-icon">📅</span>
@@ -776,17 +758,17 @@
                     <div class="contact-icon">📞</div>
                     <span>تماس</span>
                 </a>
-                <a href="https://wa.me/989174123428" class="contact-item">
+                <a href="sms:09174123428?body=سلام%2C%20من%20علاقه%E2%80%8Cمند%20به%20دریافت%20مشاوره%20تحصیلی%20هستم." class="contact-item">
+                    <div class="contact-icon">💬</div>
+                    <span>پیامک</span>
+                </a>
+                <a href="https://wa.me/989174123428?text=سلام%20من%20علاقه%E2%80%8Cمند%20به%20دریافت%20مشاوره%20تحصیلی%20هستم." target="_blank" class="contact-item">
                     <div class="contact-icon">📱</div>
                     <span>واتساپ</span>
                 </a>
-                <a href="#" class="contact-item">
-                    <div class="contact-icon">📷</div>
-                    <span>اینستاگرام</span>
-                </a>
-                <a href="#" class="contact-item">
+                <a href="#" id="emailLink" class="contact-item">
                     <div class="contact-icon">📧</div>
-                    <span>ایمیل</span>
+                    <span>جیمیل</span>
                 </a>
             </div>
 
@@ -795,5 +777,34 @@
             </a>
         </div>
     </div>
+
+    <script>
+        function isMobileDevice() {
+            return (typeof window.orientation !== "undefined") || 
+                   (navigator.userAgent.indexOf('IEMobile') !== -1) ||
+                   (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent));
+        }
+
+        function setEmailLink() {
+            const emailLink = document.getElementById('emailLink');
+            const email = 'avinlangroodi4@gmail.com';
+            const subject = 'درخواست مشاوره تحصیلی';
+            const body = 'سلام، من علاقه‌مند به دریافت مشاوره تحصیلی هستم.';
+            
+            if (isMobileDevice()) {
+                emailLink.href = `mailto:${email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+            } else {
+                emailLink.href = `https://mail.google.com/mail/?view=cm&fs=1&to=${email}&su=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+                emailLink.target = '_blank';
+            }
+        }
+
+        window.onload = setEmailLink;
+        
+        window.addEventListener('resize', function() {
+            clearTimeout(window.resizedFinished);
+            window.resizedFinished = setTimeout(setEmailLink, 100);
+        });
+    </script>
 </body>
 </html>
