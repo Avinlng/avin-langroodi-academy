@@ -779,14 +779,12 @@
     </div>
 
     <script>
-        // تشخیص موبایل یا دسکتاپ
         function isMobileDevice() {
             return (typeof window.orientation !== "undefined") || 
                    (navigator.userAgent.indexOf('IEMobile') !== -1) ||
                    (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent));
         }
 
-        // تنظیم لینک ایمیل بر اساس نوع دستگاه
         function setEmailLink() {
             const emailLink = document.getElementById('emailLink');
             const email = 'avinlangroodi4@gmail.com';
@@ -794,21 +792,16 @@
             const body = 'سلام آوین خانوم، من علاقه‌مند به دریافت مشاوره تحصیلی هستم.';
             
             if (isMobileDevice()) {
-                // در موبایل: از پروتکل mailto استفاده کن
                 emailLink.href = `mailto:${email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
             } else {
-                // در لپ‌تاپ: از جیمیل وب استفاده کن
                 emailLink.href = `https://mail.google.com/mail/?view=cm&fs=1&to=${email}&su=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
                 emailLink.target = '_blank';
             }
         }
 
-        // اجرا بعد از لود کامل صفحه
         window.onload = setEmailLink;
         
-        // آپدیت لینک اگر اندازه صفحه تغییر کرد (برای چرخش موبایل)
         window.addEventListener('resize', function() {
-            // برای جلوگیری از اجرای مکرر
             clearTimeout(window.resizedFinished);
             window.resizedFinished = setTimeout(setEmailLink, 100);
         });
